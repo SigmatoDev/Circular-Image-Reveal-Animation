@@ -19,12 +19,12 @@ This repository contains HTML, CSS, and JavaScript code to create a visually app
 ## Image Credits
 The random image used in the animation is sourced from [Unsplash](https://unsplash.com/) via the Unsplash Source API.
 
-## Author Website
-Visit [Sigmato](https://sigmato.com) for more projects and information.
+## Author
+This project is maintained by [Sigmato](https://sigmato.com).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-Feel free to adjust this description according to your preferences or project needs.
+Feel free to customize this description further if needed!
