@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigmato Circular Image Reveal Animation</title>
+<style>
+    @keyframes revealAnimation {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .sigmato-image {
+        clip-path: circle(0%);
+        opacity: 0;
+        transition: clip-path 1s, opacity 1s;
+    }
+
+    .sigmato-image.reveal {
+        clip-path: circle(50%);
+        opacity: 1;
+        animation: revealAnimation 1s ease-out;
+    }
+</style>
+</head>
+<body>
+
+<img loading="lazy" decoding="async" class="sigmato-image" src="https://source.unsplash.com/random/140x140" width="140" height="140" alt="Random Unsplash Image" role="presentation">
+
+<script>
+    // JavaScript to add reveal class after 2 seconds
+    window.onload = function() {
+        setTimeout(function() {
+            document.querySelector('.sigmato-image').classList.add('reveal');
+        }, 2000);
+    };
+</script>
+
+</body>
+</html>
