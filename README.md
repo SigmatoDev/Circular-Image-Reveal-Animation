@@ -1,4 +1,4 @@
-
+https://github.com/SigmatoDev/Circular-Image-Reveal-Animation/blob/main/Screenshot%202024-05-30%20at%206.36.58%20PM.png?raw=true
 ---
 
 # Sigmato Circular Image Reveal Animation
