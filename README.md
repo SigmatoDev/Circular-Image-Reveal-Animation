@@ -1,5 +1,4 @@
-<img width="349" alt="Screenshot 2024-05-30 at 6 36 58 PM" src="https://github.com/SigmatoDev/Circular-Image-Reveal-Animation/assets/104191257/707b216f-2d43-447d-9c2c-b89ade2c8784">
----
+
 
 # Sigmato Circular Image Reveal Animation
 
@@ -10,6 +9,8 @@ This repository contains HTML, CSS, and JavaScript code to create a visually app
 - Smooth scaling effect
 - Clean and minimalist design
 - Easily customizable
+
+<img width="349" alt="Screenshot 2024-05-30 at 6 36 58 PM" src="https://github.com/SigmatoDev/Circular-Image-Reveal-Animation/assets/104191257/707b216f-2d43-447d-9c2c-b89ade2c8784">
 
 ## Usage
 1. Clone the repository to your local machine.
