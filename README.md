@@ -1,4 +1,3 @@
-Certainly! Here's the revised description with the author's website added:
 
 ---
 
