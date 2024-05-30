@@ -23,8 +23,7 @@ The random image used in the animation is sourced from [Unsplash](https://unspla
 ## Author
 This project is maintained by [Sigmato](https://sigmato.com).
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## License- see the [LICENSE](LICENSE) file for details.
 
 ---
 
