@@ -5,41 +5,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sigmato Circular Image Reveal Animation</title>
 <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .sigmato-container {
+        text-align: center;
+    }
+
     @keyframes revealAnimation {
         0% {
             opacity: 0;
-            transform: scale(0.5);
+            clip-path: circle(0%);
         }
         100% {
             opacity: 1;
-            transform: scale(1);
+            clip-path: circle(50%);
         }
     }
 
     .sigmato-image {
-        clip-path: circle(0%);
-        opacity: 0;
+        opacity: 1;
+        clip-path: circle(50%);
         transition: clip-path 1s, opacity 1s;
     }
 
     .sigmato-image.reveal {
-        clip-path: circle(50%);
-        opacity: 1;
         animation: revealAnimation 1s ease-out;
+    }
+
+    .refresh-button {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .refresh-button:hover {
+        background-color: #0056b3;
     }
 </style>
 </head>
 <body>
 
-<img loading="lazy" decoding="async" class="sigmato-image" src="https://source.unsplash.com/random/140x140" width="140" height="140" alt="Random Unsplash Image" role="presentation">
+<div class="sigmato-container">
+    <p>Please wait until you see the action. If you do not see the animation, please refresh to view it again!</p>
+    <img loading="lazy" decoding="async" class="sigmato-image" id="image" src="https://source.unsplash.com/random/140x140" width="140" height="140" alt="Random Unsplash Image" role="presentation">
+    <button class="refresh-button" onclick="refreshImage()">Refresh</button>
+</div>
 
 <script>
-    // JavaScript to add reveal class after 2 seconds
-    window.onload = function() {
+    // Function to fetch a new random image from Unsplash
+    function refreshImage() {
+        var image = document.getElementById('image');
+        image.src = 'https://source.unsplash.com/random/140x140?sig=' + Math.random();
+        image.classList.remove('reveal'); // Remove the 'reveal' class to restart the animation
         setTimeout(function() {
-            document.querySelector('.sigmato-image').classList.add('reveal');
-        }, 2000);
-    };
+            image.classList.add('reveal'); // Add the 'reveal' class after a short delay to restart the animation
+        }, 100);
+    }
 </script>
 
 </body>
